@@ -9,8 +9,9 @@ from rest_framework.parsers import JSONParser
 from rest_framework import status
 from rest_framework.decorators import api_view
 from datetime import datetime, time
-
+import time as t
 cred = credentials.Certificate('ruteamearchi-firebase.json')
+t.sleep(60)
 firebase_admin.initialize_app(cred)
 
 db = firestore.client()
